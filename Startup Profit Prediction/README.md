@@ -33,9 +33,6 @@ Predict profit of startups
 
  - Sklearn (For data training, importing models and performance check)
 
-## CONCLUSION
-The analysis of the startup dataset reveals significant correlations between the features and the profits, providing valuable insights for potential investors and decision-makers.
-
 ## 🛠️ How to Get Started  
 
 1. **Fork this Repository**  
@@ -89,6 +86,11 @@ We ❤️ contributions! Follow these simple steps to contribute:
 
 4. **Push and PR**  
    Push your branch and create a pull request for review.  
+
+---
+
+## CONCLUSION
+The analysis of the startup dataset reveals significant correlations between the features and the profits, providing valuable insights for potential investors and decision-makers.
 
 ---
 
