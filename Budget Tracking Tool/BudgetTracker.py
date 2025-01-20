@@ -11,6 +11,8 @@ def initialize_data_file():
 
 def add_transaction(transaction_type, category, amount, description):
     # TODO: Validate that the amount is a positive number.
+    if ((type(amount) != float and type(amount) != int) or amount < 0):  #checks if the datatype of amount is not int or float and then checks if entered amount is negative
+        print("Invalid amount")
     # TODO: Automatically add the current date and time when a transaction is recorded.
     with open(DATA_FILE, mode='a', newline='') as file:
         writer = csv.writer(file)
