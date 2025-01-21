@@ -44,6 +44,18 @@ def get_board():
         for c in range(6):
             val = entries[r][c].get()
             # TODO: Add validation to ensure input is a valid integer between 1 and 6 for 6x6 grid.
+            try: #error handling for it to run a block of code
+                # Convert the value to an integer
+                int_val = int(val)
+                
+                # Check if it's between 1 and 6
+                if 1 <= int_val <= 6:
+                    row.append(int_val)
+                else:
+                    raise ValueError(f"Value out of range: {val}")
+            except ValueError: # in case the block isn't executed successfully 
+                print(f"Invalid input at row {r + 1}, column {c + 1}: '{val}'. Must be an integer between 1 and 6.")
+                return None  # return None if invalid input is found
         board.append(row)
     return board
 
