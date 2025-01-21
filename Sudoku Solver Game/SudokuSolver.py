@@ -62,6 +62,10 @@ def get_board():
 def solve():
     """Solves the Sudoku puzzle and updates the GUI."""
     board = get_board()
+
+    #start timer
+    start_time = time.time()
+
     if solve_sudoku(board):
         for r in range(6):
             for c in range(6):
@@ -70,10 +74,11 @@ def solve():
                     entries[r][c].insert(0, str(board[r][c]))
     else:
         # TODO: Inform the user clearly that the puzzle cannot be solved.
-        tk.messagebox.showinfo("Unsolvable", "The puzzle cannot be solved")
-
         pass  # Currently, the user is not informed if the puzzle is unsolvable.
     # TODO: Display the time taken to solve the puzzle.
+    end_time = time.time()
+    time_taken = end_time - start_time
+    tk.messagebox.showinfo("Time Taken", f"Time taken to solve the puzzle: {time_taken:.2f} seconds")
 
 def classify_puzzle():
     """Classify the puzzle as Easy, Medium, or Hard based on complexity."""
