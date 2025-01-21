@@ -70,6 +70,8 @@ def solve():
                     entries[r][c].insert(0, str(board[r][c]))
     else:
         # TODO: Inform the user clearly that the puzzle cannot be solved.
+        tk.messagebox.showinfo("Unsolvable", "The puzzle cannot be solved")
+
         pass  # Currently, the user is not informed if the puzzle is unsolvable.
     # TODO: Display the time taken to solve the puzzle.
 
