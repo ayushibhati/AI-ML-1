@@ -62,6 +62,10 @@ def get_board():
 def solve():
     """Solves the Sudoku puzzle and updates the GUI."""
     board = get_board()
+    
+    #start timer
+    start_time = time.time()
+
     if board is None:
         messagebox.showinfo("Unsolvable", "Please provide a valid puzzle board")
         return
@@ -74,6 +78,9 @@ def solve():
     else:
         messagebox.showinfo("Unsolvable", "The puzzle cannot be solved")
     # TODO: Display the time taken to solve the puzzle.
+    end_time = time.time()
+    time_taken = end_time - start_time
+    tk.messagebox.showinfo("Time taken", f"Time taken to solve the puzzle: {time_taken:.2f} seconds")
 
 def classify_puzzle():
     """Classify the puzzle as Easy, Medium, or Hard based on complexity."""
