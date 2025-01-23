@@ -88,6 +88,14 @@ def classify_puzzle():
 def clear_grid():
     """Clear the Sudoku grid."""
     # TODO: Add a button to clear the grid and restart.
+def clear_grid():
+    """Clear the Sudoku grid."""
+    for r in range(6):
+        for c in range(6):
+            entries[r][c].delete(0, tk.END)
+
+clear_button = tk.Button(root, text="Clear Grid", font=('Arial', 20), command=clear_grid)
+clear_button.grid(row=6, column=3, columnspan=3)
     
 
 def show_metrics():
